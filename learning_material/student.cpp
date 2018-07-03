@@ -138,8 +138,10 @@ int main() {
 	//Student ** classRosterArray = new Student*[count];
 	Student* student1 = new Student();
 	student1->set_degreeProgram("Security");
+	student1->set_studentID("A1");
 	Student student2("A2", "Jeremy", "Arnold", "jeremy.arnold@alaska.gov", 39, 30, 40, 50, "Networking");
 	cout << "Student1 Degree Program: " << student1->get_degreeProgram() << '\n';
+	cout << "Student1 StudentID: " << student1->get_studentID() << '\n';
 	
 	return 0;
 }
