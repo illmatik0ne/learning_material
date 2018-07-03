@@ -2,7 +2,6 @@
 #include "student.h"
 #include <iostream>
 
-
 using namespace std;
 
 const std::string studentData[] =
@@ -141,22 +140,46 @@ void Student::printStudent()
 
 }
 
+void Student::printDaysInCourse(std::string v_studentID)
+{
+	for (int i = 0; i < 3; i++)
+	{
+		/*
+		To Do: Make sure I create my student objects in a for loop so that I always know the object names in the student class.
+		Like:  Student* studenti = new Student();
+		This way I can use this loop to iterate through student objects and find the studentID.
+		*/
+	}
+}
+
 int main() {
 	//const size_t count = 3;
 	//Student ** classRosterArray = new Student*[count];
 	
 	// Testing creating student object and populating data statically through mutators
-	Student* student1 = new Student();
-		student1->set_studentID("A1");
-		student1->set_firstName("John");
-		student1->set_lastName("Smith");
-		student1->set_emailAddress("John1989@gm ail.com");
-		student1->set_age(20);
-		student1->set_daysInCourse1(30);
-		student1->set_daysInCourse2(35);
+	Student* student0 = new Student();
+		student0->set_studentID("A1");
+		student0->set_firstName("John");
+		student0->set_lastName("Smith");
+		student0->set_emailAddress("John1989@gm ail.com");
+		student0->set_age(20);
+		student0->set_daysInCourse1(30);
+		student0->set_daysInCourse2(35);
+		student0->set_daysInCourse3(40);
+		student0->set_degreeProgram("NETWORKING");
+
+		Student* student1 = new Student();
+		student1->set_studentID("A2");
+		student1->set_firstName("Suzan");
+		student1->set_lastName("Erickson");
+		student1->set_emailAddress("Erickson_1990@gmailcom");
+		student1->set_age(19);
+		student1->set_daysInCourse1(50);
+		student1->set_daysInCourse2(30);
 		student1->set_daysInCourse3(40);
-		student1->set_degreeProgram("NETWORKING");
-	
+		student1->set_degreeProgram("SOFTWARE");
+
+
 	/* 
 	Testing creating student object with paramaterized constructor.
 	Should be removed but used as a learning tool to help me understand constructors and accessor/mutators.
@@ -165,6 +188,7 @@ int main() {
 	*/
 
 	Student student2("A2", "Jeremy", "Arnold", "jarno50@wgu.edu", 39, 30, 40, 50, "SOFTWARE");
+	student0->printStudent();
 	student1->printStudent();
 	student2.printStudent();
 	

@@ -38,6 +38,7 @@ public:
 	std::string set_degreeProgram(std::string);
 
 	void printStudent();
+	void printDaysInCourse(std::string);
 
 };
 #endif
