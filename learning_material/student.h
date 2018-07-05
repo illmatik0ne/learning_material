@@ -11,6 +11,7 @@ private:
 	std::string emailAddress;
 	int age, daysInCourse1, daysInCourse2, daysInCourse3;
 	std::string degreeProgram;
+	Student ** classRosterArray;
 
 public:
 
